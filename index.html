@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <title>Connect Wallet</title>
-  <script src="https://unpkg.com/@web3modal/html@2.5.5"></script>
 </head>
 <body>
 
   <button id="connectBtn">Connect Wallet</button>
 
-  <script>
-    const modal = new window.Web3Modal({
+  <script type="module">
+    import { Web3Modal } from 'https://cdn.jsdelivr.net/npm/@web3modal/html@2.5.5/+esm';
+
+    const modal = new Web3Modal({
       projectId: '8f3eb896d127f6a619e7d78b1085647f',
       walletConnectVersion: 2,
       themeMode: 'dark'
